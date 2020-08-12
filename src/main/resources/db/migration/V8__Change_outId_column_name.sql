@@ -1,0 +1,1 @@
+alter table notification change outerId outer_id bigint not null;
