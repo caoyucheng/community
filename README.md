@@ -34,20 +34,15 @@
 git clone https://github.com/caoyucheng/community.git
 ````
 
-### 3. 运行打包命令
-```bash
-mvn package
-```
-
-### 4. 数据库配置
-- 本地环境配置好MySQL，将`application.properties`中数据库相关参数根据本地环境进行修改
-- 运行 migrate 和 generator 的命令:
+### 3. 数据库配置
+1. 本地环境配置好MySQL，将`application.properties`中数据库相关参数根据本地环境进行修改
+2. 运行 migrate 和 generator 的命令:
 ```bash
 mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
 
-### 4. 重新运行打包命令
+### 4. 打包项目
 ```bash
 mvn package
 ```
